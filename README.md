@@ -78,9 +78,14 @@
 │   └── watchlist.md           # 待核实线索（D 级，不进正式案例）
 ├── sources/
 │   └── registry.yml           # 来源登记表：URL、类型、抓取日期、可信度
-└── scripts/
+├── scripts/
     ├── validate.py            # 校验 front-matter 与必填章节
     └── build_index.py         # 从案例自动重建 index/
+├── requirements.txt           # PyYAML + jsonschema
+└── .github/
+    ├── workflows/validate.yml # PR 自动校验（含索引一致性检查）
+    ├── PULL_REQUEST_TEMPLATE.md
+    └── ISSUE_TEMPLATE/new-case.yml
 ```
 
 **为什么按行业分目录而不是按厂商**：案例的使用场景是"我在 X 行业，别人怎么做的"，行业是第一检索维度；厂商维度用 `vendor` 字段和 `index/` 解决。
