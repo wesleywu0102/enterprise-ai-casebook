@@ -1,0 +1,97 @@
+# 受控场景词表
+#
+# 分类原则：按"AI 替代/增强的是哪一段工作"划分，不按技术划分。
+# 每条场景都标注了「可度量指标」候选，方便填 metrics 时直接取用。
+
+scenarios:
+  - id: customer-support
+    name_zh: 客户服务
+    what: 一线咨询的自动应答、分单、升级
+    typical_metrics: [自助解决率, 平均处理时长, 转人工率, 单次服务成本]
+
+  - id: knowledge-retrieval
+    name_zh: 知识检索与问答
+    what: 在内部文档/研究库上做检索增强问答
+    typical_metrics: [检索命中率, 查找耗时, 文档覆盖率, 采纳率]
+
+  - id: sales-enablement
+    name_zh: 销售赋能
+    what: 报价、方案、客户会议准备、CRM 记录
+    typical_metrics: [响应时长, 转化率, 人均客户数]
+
+  - id: software-engineering
+    name_zh: 软件研发
+    what: 代码生成、测试、评审、迁移
+    typical_metrics: [合并周期, 缺陷密度, 代码采纳率, 迁移工时]
+
+  - id: coding-agent
+    name_zh: 编码智能体
+    what: 端到端完成多步开发任务（区别于补全式辅助）
+    typical_metrics: [任务完成率, 人工返工率, 单任务成本]
+
+  - id: document-processing
+    name_zh: 文档处理
+    what: 合同、单据、申报材料的抽取、摘要、比对
+    typical_metrics: [处理时长, 抽取准确率, 人工复核率]
+
+  - id: clinical-documentation
+    name_zh: 临床文书
+    what: 门诊/住院病历、出院小结的语音转写与起草
+    typical_metrics: [书写耗时, 下班后文书时间, 病历关闭时长, 患者体验]
+
+  - id: clinical-decision
+    name_zh: 临床决策支持
+    what: 剂量选择、影像判读、风险分层
+    typical_metrics: [一致性, 敏感性/特异性, 临床结局]
+
+  - id: manufacturing-quality
+    name_zh: 制造质量与工艺
+    what: 视觉质检、工艺参数优化、PLC 代码生成
+    typical_metrics: [漏检率, 过杀率, 工艺调试工时]
+
+  - id: scheduling-optimization
+    name_zh: 排产与调度
+    what: 生产排程、人员排班、运力调度
+    typical_metrics: [排产响应时长, 设备利用率, 交付准时率]
+
+  - id: predictive-maintenance
+    name_zh: 预测性维护
+    what: 设备故障预测、备件预测
+    typical_metrics: [非计划停机时长, 误报率, 备件周转]
+
+  - id: supply-chain
+    name_zh: 供应链
+    what: 需求预测、库存、比价、履约
+    typical_metrics: [库存周转, 缺货率, 履约成本, 比价耗时]
+
+  - id: risk-compliance
+    name_zh: 风控与合规
+    what: 反欺诈、KYC、监管报送、合同审查
+    typical_metrics: [单案成本, 误报率, 审查覆盖度]
+
+  - id: marketing-content
+    name_zh: 营销内容
+    what: 素材生成、投放优化、多语言本地化
+    typical_metrics: [素材产出周期, 单素材成本, 转化率]
+
+  - id: backoffice-automation
+    name_zh: 后台流程自动化
+    what: 报销、对账、开票、数据录入
+    typical_metrics: [单笔处理时长, 一次通过率, 人力占用]
+
+  - id: field-service
+    name_zh: 现场服务
+    what: 维保派单、故障诊断、知识支持
+    typical_metrics: [首次修复率, 到场时长, 单次服务成本]
+
+  - id: data-analysis
+    name_zh: 数据分析
+    what: 自然语言取数、报表生成、异常归因
+    typical_metrics: [取数时长, 需求积压, 报表使用率]
+
+  - id: procurement
+    name_zh: 采购
+    what: 寻源、比价、供应商评估
+    typical_metrics: [比价周期, 采购降本率]
+
+# 与 FDE 的关系：FDE 不是场景，是交付方式。见 deployment.yml

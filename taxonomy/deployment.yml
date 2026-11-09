@@ -1,0 +1,61 @@
+# 交付模式词表（含 FDE 形态）
+#
+# 这一维度比"用了哪个模型"更能解释案例的成败。
+# 同样是 GPT-4，交付方式不同，结果差 3 倍以上。
+
+deployment_models:
+  - id: vendor-saas
+    name_zh: 采购 SaaS
+    desc: 直接购买现成产品席位，标准化配置，无定制开发
+    typical_time_to_value: 2 周 – 2 个月
+    risk: 场景不匹配时容易被弃用；数据边界受厂商限制
+
+  - id: vendor-copilot
+    name_zh: 嵌入式助手
+    desc: 厂商产品嵌进已有工作流（IDE、EHR、CAD、CRM），员工在原有界面内使用
+    typical_time_to_value: 1 – 3 个月
+    risk: 效果高度依赖原工作流的数字化程度
+
+  - id: platform-build
+    name_zh: 平台自建
+    desc: 企业采购底层平台（数据/编排/评测），由内部团队在其上构建业务应用
+    typical_time_to_value: 6 – 18 个月
+    risk: 平台建成但无人用；需要配套的用例运营机制
+
+  - id: in-house
+    name_zh: 完全自研
+    desc: 自建模型/应用栈，外部仅提供算力或基础模型 API
+    typical_time_to_value: 12 个月以上
+    risk: 维护成本被低估；模型迭代速度快于内部工程节奏
+
+  - id: si-delivery
+    name_zh: 集成商交付
+    desc: 由咨询/集成商承接端到端交付，含流程重构
+    typical_time_to_value: 3 – 12 个月
+    risk: 交付完成后知识不转移，客户无法自主迭代
+
+# FDE 五种形态
+# 判断标准：谁的人、坐在哪里、对什么结果负责
+fde_forms:
+  - id: none
+    name_zh: 无驻场
+    desc: 纯产品交付，客户自助
+  - id: vendor-embedded
+    name_zh: 厂商 FDE 驻场
+    desc: 模型厂商/平台厂商派工程师进驻客户现场，对生产指标负责，并把现场经验回流产品
+    examples: [OpenAI FDE, Palantir FDE, Anthropic 合资公司]
+  - id: si-partner
+    name_zh: 集成商驻场
+    desc: 第三方服务商派驻，通常按人天或里程碑计费
+    examples: [埃森哲, 各地 AI 服务商, 运营商政企团队]
+  - id: in-house
+    name_zh: 企业自建前线团队
+    desc: 甲方把自己的研发前置到业务一线，向业务结果交付而非向需求交付
+    examples: [中国联通软研院客服 FDE, 部分制造企业 AI 军团]
+  - id: unknown
+    name_zh: 未披露
+    desc: 公开信息不足以判断
+
+# 备注：
+# FDE 的核心不是"驻场"，而是"对业务指标负责 + 现场经验回流产品"。
+# 只派人不出结果、或只出结果不回流的，都是外包，不是 FDE。

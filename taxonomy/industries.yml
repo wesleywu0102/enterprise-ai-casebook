@@ -1,0 +1,46 @@
+# 受控行业词表
+# 新增行业需同时更新 schema/case.schema.json 的 enum
+
+industries:
+  - id: financial-services
+    name_zh: 金融服务
+    subs: [banking, wealth-management, insurance, capital-markets, payments]
+  - id: healthcare
+    name_zh: 医疗服务
+    subs: [hospital-system, ambulatory-care, payer, pharmacy, diagnostics]
+  - id: pharma-biotech
+    name_zh: 医药与生物技术
+    subs: [drug-discovery, clinical-development, manufacturing, commercial]
+  - id: manufacturing
+    name_zh: 制造业
+    subs: [automotive, industrial-equipment, electronics, home-appliance, chemicals]
+  - id: retail
+    name_zh: 零售与消费品
+    subs: [grocery, apparel, ecommerce, pharmacy-retail, cpg]
+  - id: software-internet
+    name_zh: 软件与互联网
+    subs: [saas, platform, developer-tools, media]
+  - id: telecom
+    name_zh: 电信
+    subs: [carrier, network-ops, customer-service]
+  - id: logistics
+    name_zh: 物流与运输
+    subs: [express, warehousing, freight, last-mile]
+  - id: energy
+    name_zh: 能源与公用事业
+    subs: [oil-gas, power, utilities, renewables]
+  - id: professional-services
+    name_zh: 专业服务
+    subs: [consulting, legal, accounting, audit]
+  - id: public-sector
+    name_zh: 公共部门
+    subs: [defense, government-services, smart-city]
+  - id: education
+    name_zh: 教育
+    subs: [k12, higher-ed, corporate-training]
+  - id: real-estate
+    name_zh: 房地产与建筑
+    subs: [development, property-management, construction]
+  - id: agriculture
+    name_zh: 农业
+    subs: [farming, agri-processing]

@@ -1,0 +1,38 @@
+# 标签表
+#
+# 标签用于横向切片，不要重复 industry/scenario 已有的信息。
+# 新增标签先在此登记，否则 validate.py 会警告。
+
+groups:
+  技术形态:
+    - RAG
+    - agent-orchestration
+    - fine-tuning
+    - evals-in-production
+    - human-review
+    - voice-interface
+  组织条件:
+    - exec-sponsorship
+    - ai-champion-network
+    - center-of-excellence
+    - internal-training
+    - incentive-alignment
+  约束条件:
+    - regulated-industry
+    - data-sovereignty
+    - zero-data-retention
+    - union-labor
+    - multilingual
+  结果特征:
+    - floor-raising          # 对基础薄弱者增益更大
+    - novelty-decay          # 效果随时间衰减
+    - metric-definition-war  # 指标口径存在争议
+    - vendor-sourced-number  # 数字由厂商测算
+  交付特征:
+    - fde-model
+    - bootcamp-model
+    - co-delivery
+    - build-operate-transfer
+
+# 使用建议：
+# 每案例 3–6 个标签。超过 8 个说明分类没想清楚。

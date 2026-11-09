@@ -1,0 +1,33 @@
+name: validate
+
+on:
+  pull_request:
+    paths:
+      - "cases/**"
+      - "schema/**"
+      - "sources/**"
+      - "scripts/**"
+  push:
+    branches: [main]
+    paths:
+      - "cases/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Validate cases
+        run: python scripts/validate.py --strict
+      - name: Check index is up to date
+        run: |
+          python scripts/build_index.py
+          if [ -n "$(git status --porcelain index/)" ]; then
+            echo "::error::index/ 与 cases/ 不一致，请先运行 python scripts/build_index.py 并提交"
+            git --no-pager diff --stat index/
+            exit 1
+          fi

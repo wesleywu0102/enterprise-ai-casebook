@@ -1,0 +1,82 @@
+name: 提交新案例 / 修正
+description: 提交一条企业级 AI 落地案例，或修正已收录案例中的数字
+title: "[case] "
+labels: ["case"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: 企业名称
+      description: 落地企业（甲方）的公开全称，不是厂商
+    validations:
+      required: true
+
+  - type: dropdown
+    id: industry
+    attributes:
+      label: 行业
+      options:
+        - financial-services
+        - healthcare
+        - pharma-biotech
+        - manufacturing
+        - retail
+        - software-internet
+        - telecom
+        - logistics
+        - energy
+        - professional-services
+        - public-sector
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: pain
+    attributes:
+      label: 业务痛点
+      description: 部署前的流程长什么样？卡在哪一步？有具体数字最好
+    validations:
+      required: true
+
+  - type: textarea
+    id: scene
+    attributes:
+      label: AI 应用场景与人机分工
+      description: 输入 → 处理 → 输出 → 人工还要做什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: 可验证成效（含口径）
+      description: 每条写清：指标 / 数值 / 基线 / 谁算的 / 时间窗。没有基线的写"未披露"
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: 一手来源链接
+      description: 至少一个 A 或 B 级来源。二手博客请标注为线索，不要作为唯一来源
+    validations:
+      required: true
+
+  - type: textarea
+    id: doubts
+    attributes:
+      label: 存疑之处
+      description: 哪些数字核不了？哪些因果排不掉？
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认该案例已在生产环境运行，不是发布会或 Demo
+          required: true
+        - label: 我确认所有链接都亲自打开过
+          required: true

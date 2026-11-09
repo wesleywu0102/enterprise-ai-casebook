@@ -1,0 +1,18 @@
+本仓库内容（cases/、fde/、index/、taxonomy/、schema/*.md、README.md、CONTRIBUTING.md）采用
+Creative Commons Attribution 4.0 International（CC BY 4.0）许可。
+
+你可以自由复制、分发、改编，用于商业或非商业用途，条件是保留署名与来源链接，并标注证据等级。
+
+协议全文：https://creativecommons.org/licenses/by/4.0/legalcode
+
+scripts/ 目录下的代码采用 MIT 许可。
+
+---
+
+引用建议格式：
+
+  <作者>. (<年份>). <案例标题> [Enterprise AI Casebook, 证据等级 X].
+  https://github.com/wesleywu0102/enterprise-ai-cases/blob/main/cases/...
+
+注意：本仓库对第三方数据不作任何担保。案例中的数字均标注了其原始来源与口径限制，
+引用前请回到一手来源核对，并保留"企业自述/未经第三方审计"等限定语。

@@ -1,0 +1,303 @@
+# 来源登记表
+#
+# 所有写进案例 sources.url 的链接必须在此登记（validate.py --strict 会检查）。
+# 登记的目的不是收藏，而是记录：这条来源能不能用、能用来说明什么。
+
+meta:
+  last_updated: "2026-11-09"
+  total: 24
+  note: "访问日期统一为 2026-11-09；被站点拒绝抓取的已标注"
+
+sources:
+  # ---------- A 级：同行评审 ----------
+  - id: src-nejm-cat-26-0269
+    url: https://catalyst.nejm.org/doi/full/10.1056/CAT.26.0269
+    type: peer-reviewed
+    grade: A
+    publisher: NEJM Catalyst
+    published: "2026"
+    note: "Jefferson Health 环境 AI 文书部署；作者披露厂商未参与分析、无外部资助。可直接引用。"
+    used_in: [healthcare-jefferson-abridge]
+
+  - id: src-jama-netw-open-2026
+    url: https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2849634
+    type: peer-reviewed
+    grade: A
+    publisher: JAMA Network Open 2026;9(5):e2615762
+    published: "2026-05"
+    note: "Providence 环境 AI 研究；效应量温和。含完整回归系数与置信区间。"
+    used_in: [healthcare-providence-dragon-copilot]
+
+  - id: src-jama-quintuple-aim
+    url: https://jamanetwork.com/journals/jama/fullarticle/2847322
+    type: peer-reviewed
+    grade: A
+    publisher: JAMA 2026;335(16):1393-1395
+    published: "2026"
+    note: "述评：环境 AI 的净时间节省有限，主要收益在认知负荷。用于校准引用口径。"
+    used_in: [healthcare-jefferson-abridge]
+
+  # ---------- A 级：财报/投资者关系 ----------
+  - id: src-jpm-investor-day-2025
+    url: https://www.jpmorganchase.com/ir
+    type: earnings-call
+    grade: A
+    publisher: JPMorganChase
+    published: "2025-05-19"
+    note: "投资者日：LLM Suite 覆盖 20 万+ 员工、175+ 用例在生产、KYC 单案成本降 40%。需以 IR 归档原文为准。"
+    used_in: [financial-jpmorgan-llm-suite]
+
+  - id: src-midea-2025-ar
+    url: https://www.midea.com.cn/investor
+    type: annual-report
+    grade: A
+    publisher: 美的集团
+    published: "2026"
+    note: "2025 年报：AI 智能体全年提效超 1,500 万小时、降本 7 亿元。"
+    used_in: [manufacturing-midea-agents]
+
+  - id: src-midea-q3-2026
+    url: https://news.10jqka.com.cn/field/20261102/681370808.shtml
+    type: media-report
+    grade: C
+    publisher: 同花顺财经（转述三季报与科技月）
+    published: "2026-11-02"
+    note: "三季报数据经媒体转述：超 2 万智能体、核心场景提效 >30%、排产响应 +50%；徐翼表述 2024 年 1.7 亿、2025 年 7.7 亿、2026 目标 8.8 亿。原始口径以公司公告为准。"
+    used_in: [manufacturing-midea-agents]
+
+  - id: src-gmw-midea
+    url: https://difang.gmw.cn/gd/2026-11/03/content_39083169.htm
+    type: media-report
+    grade: C
+    publisher: 光明网
+    published: "2026-11-03"
+    note: "转述 2025 年报与 2026 半年报口径：提效 1,500 万小时/降本 7 亿元；2026H1 提效 900 万小时/降本 4.5 亿元。"
+    used_in: [manufacturing-midea-agents]
+
+  # ---------- A/B 级：企业官方 ----------
+  - id: src-openai-morgan-stanley
+    url: https://openai.com/index/morgan-stanley/
+    type: official-case-study
+    grade: B
+    publisher: OpenAI
+    published: unknown
+    note: "无发布日期、无上线时间；98% 的分母未定义。数字均为自述。"
+    used_in: [financial-morganstanley-ai-assistant]
+
+  - id: src-openai-moderna
+    url: https://openai.com/index/moderna/
+    type: official-case-study
+    grade: B
+    publisher: OpenAI
+    published: unknown
+    note: "全部为采用率指标，无工时/成本数据。"
+    used_in: [pharma-moderna-chatgpt-enterprise]
+
+  - id: src-siemens-pr-2023-11
+    url: https://press.siemens.com/global/en/pressrelease/ai-industry-schaeffler-and-siemens-bring-industrial-copilot-shopfloor
+    type: official-press-release
+    grade: B
+    publisher: Siemens
+    published: "2023-11"
+    note: "全文无任何百分比数字。用于反证「35%」无一手来源。"
+    used_in: [manufacturing-siemens-schaeffler-copilot]
+
+  - id: src-siemens-ms-2023-10
+    url: https://assets.new.siemens.com/siemens/assets/api/uuid:89b84c68-fcea-4d6d-8180-678d4663e55b/HQCOPR202310306800EN.pdf
+    type: official-press-release
+    grade: B
+    publisher: Siemens / Microsoft
+    published: "2023-10-30"
+    note: "联合通稿 PDF；含「weeks to minutes」表述与「客户数据不用于训练模型」。"
+    used_in: [manufacturing-siemens-schaeffler-copilot]
+
+  - id: src-schaeffler-story
+    url: https://www.schaeffler.com/en/media/stories/digitalization-stories/ai-in-industry/
+    type: official-case-study
+    grade: B
+    publisher: Schaeffler
+    published: "2023-11"
+    note: "甲方官方故事页；功能描述清楚，无量化数字。"
+    used_in: [manufacturing-siemens-schaeffler-copilot]
+
+  - id: src-providence-blog
+    url: https://blog.providence.org/national-news/providence-study-finds-ai-ambient-listening-tool-modestly-reduces-documentation-burden-improves-provider-efficiency
+    type: company-blog
+    grade: B
+    publisher: Providence
+    published: "2026-05-29"
+    note: "机构自述，用词克制（modest）。含研究者引语。"
+    used_in: [healthcare-providence-dragon-copilot]
+
+  - id: src-intercom-home-2026
+    url: https://www.intercom.com/
+    type: official-case-study
+    grade: C
+    publisher: Intercom
+    published: "2026"
+    note: "厂商自述：76% 平均解决率、12,000+ 客户。无审计。"
+    used_in: [software-intercom-fin]
+
+  - id: src-intercom-pricing-2026
+    url: https://www.intercom.com/learning-center/ai-customer-service-agent-pricing-comparison
+    type: official-case-study
+    grade: C
+    publisher: Intercom
+    published: "2026"
+    note: "同一厂商给出 8,000+ 客户、76%、每月 +1pp、65% 保证与 100 万美元赔付条款。"
+    used_in: [software-intercom-fin]
+
+  - id: src-fin-ai-accuracy
+    url: https://fin.ai/learn/ai-customer-service-agent-accuracy
+    type: official-case-study
+    grade: C
+    publisher: Fin（Intercom）
+    published: "2026"
+    note: "同一厂商另给 65% avg / 93% max，并自承行业真实区间 60–86%。是「指标口径战」的直接证据。"
+    used_in: [software-intercom-fin]
+
+  - id: src-palantir-walgreens-quote
+    url: https://www.palantir.com/
+    type: official-case-study
+    grade: C
+    publisher: Palantir
+    published: unknown
+    note: "首页客户证言合集：Walgreens 10 店→4,000 店/8 个月；Sompo 三年利润改善 6,000 万美元；General Mills 日均省 4 万美元。全部为单方引语。"
+    used_in: [retail-walgreens-palantir, fde-palantir-bootcamp]
+
+  - id: src-schaeffler-zh
+    url: https://w1.siemens.com.cn/press/NewsDetail.aspx?ArticleId=17741&ColumnId=2
+    type: official-press-release
+    grade: B
+    publisher: 西门子中国
+    published: "2023-11"
+    note: "中文版通稿，同样无百分比数字。可用于中文引用。"
+    used_in: [manufacturing-siemens-schaeffler-copilot]
+
+  # ---------- B/C 级：FDE 相关 ----------
+  - id: src-openai-careers-fde-nyc
+    url: https://openai.com/careers/forward-deployed-engineer-(fde)-nyc-new-york-city/
+    type: official-careers-page
+    grade: A
+    publisher: OpenAI
+    published: "2026"
+    note: "岗位描述原文：团队定位、五个成功维度、代码与出差要求。"
+    used_in: [fde-openai]
+
+  - id: src-openai-careers-fde-fs
+    url: https://openai.com/careers/forward-deployed-engineer-(fde)-financial-services-nyc-new-york-city/
+    type: official-careers-page
+    grade: A
+    publisher: OpenAI
+    published: "2026"
+    note: "金融 FDE：上线标准、审计留痕、评测基准、50% 出差。"
+    used_in: [fde-openai]
+
+  - id: src-gic-anthropic-jv
+    url: https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/
+    type: official-press-release
+    grade: A
+    publisher: GIC / Anthropic
+    published: "2026-05-04"
+    note: "15 亿美元、独立实体、Anthropic 工程资源嵌入；含四方高管署名引语。"
+    used_in: [fde-anthropic-goldman-jv]
+
+  - id: src-cnbc-anthropic-jv
+    url: https://www.cnbc.com/amp/2026/05/04/anthropic-goldman-blackstone-ai-venture.html
+    type: media-report
+    grade: B
+    publisher: CNBC
+    published: "2026-05-04"
+    note: "Nachmann 采访：FDE 人才短缺、模型本身不改变流程。"
+    used_in: [fde-anthropic-goldman-jv]
+
+  - id: src-fortune-anthropic-jv
+    url: https://fortune.com/2026/05/04/anthropic-claude-consulting-industry-joint-venture-blackstone-goldman-sachs/
+    type: media-report
+    grade: B
+    publisher: Fortune
+    published: "2026-05-04"
+    note: "对咨询业冲击的分析；含「每 1 美元软件支出对应 6 美元服务」的行业结构判断。"
+    used_in: [fde-anthropic-goldman-jv]
+
+  - id: src-ciodive-jpm-fde
+    url: https://tech.yahoo.com/cybersecurity/articles/jpmorgan-chase-goldman-sachs-underscore-201500310.html
+    type: media-report
+    grade: C
+    publisher: CIO Dive（Yahoo 转载）
+    published: "2026-10"
+    note: "Argenti 关于 FDE「becomes unnecessary in the shortest time possible」的表述；同时含 JPMorgan CIO 的 LLM Suite 说法。"
+    used_in: [financial-jpmorgan-llm-suite, fde-anthropic-goldman-jv]
+
+  - id: src-people-shanghai-fde
+    url: http://sh.people.cn/n2/2026/0210/c134768-41499152.html
+    type: media-report
+    grade: B
+    publisher: 人民网上海频道
+    published: "2026-02-10"
+    note: "上海电信 FDE 三层服务；上海三年行动方案表述。无交付成效数据。"
+    used_in: [fde-china]
+
+  - id: src-cnii-unicom-fde
+    url: https://www.cnii.com.cn/gxxww/rmydb/202610/t20261015_764341.html
+    type: media-report
+    grade: B
+    publisher: 中国工信新闻网
+    published: "2026-10-15"
+    note: "联通软研院 FDE：近五年降本增效 22 亿元、外部 6 行业 40 余家、合同超 1.2 亿元。口径未披露。"
+    used_in: [fde-china]
+
+  - id: src-nanjing-fde
+    url: http://rjg.njyh.cn/d2/14/c19828a381460/page.htm
+    type: media-report
+    grade: B
+    publisher: 南京市雨花台区人民政府
+    published: "2026-08"
+    note: "软件谷 FDE 大会（近 500 人）、全市首个 FDE 联盟、省级 5,000 家智能工厂目标；嘉环科技 FDE 小队与「降本提效各 30%」自述。"
+    used_in: [fde-china]
+
+  - id: src-yunba-ba-fde
+    url: http://www.js.chinakejiwang.cn/xinwen/2026/0924/092026_664.html
+    type: media-report
+    grade: C
+    publisher: 江苏科技网（云栖大会报道）
+    published: "2026-09-24"
+    note: "云巴巴 FDE 方法论：先 Echo 后 Delta、三阶段六模块；五行业案例均无客户名与数字。"
+    used_in: [fde-china]
+
+  # ---------- D 级：仅作线索 ----------
+  - id: src-klarna-pr-2024
+    url: https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/
+    type: official-press-release
+    grade: B
+    publisher: Klarna
+    published: "2024-02"
+    note: "抓取被站点拒绝（Access Denied）。内容依据多方一致转述与后续报道交叉确认，引用时需注明未取得原文。"
+    used_in: [financial-klarna-ai-assistant]
+
+  - id: src-bloomberg-klarna-2025
+    url: https://m.economictimes.com/tech/artificial-intelligence/klarna-retreats-from-ai-only-customer-service-push-resumes-hiring-amid-quality-concerns-report/articleshow/121267397.cms
+    type: media-report
+    grade: D
+    publisher: Bloomberg（Economic Times 转述）
+    published: "2025-05"
+    note: "CEO 承认质量下降、重启招聘。原始彭博稿为付费墙，此为转述。"
+    used_in: [financial-klarna-ai-assistant]
+
+  - id: src-forrester-2026
+    url: https://www.forrester.com/blogs/forresters-2026-technology-strategy-impact-and-enterprise-architecture-awards-winners-for-na/
+    type: media-report
+    grade: B
+    publisher: Forrester
+    published: "2026"
+    note: "JPMorganChase 获奖材料：约 32 万员工、80+ 数据源、85% 周留存、89 分满意度。数据由企业提交。"
+    used_in: [financial-jpmorgan-llm-suite]
+
+  - id: src-jpm-q3-2026
+    url: https://www.bankingnewsai.com/banks/jpmorgan-chase/ai-strategy
+    type: media-report
+    grade: C
+    publisher: BankingNewsAI（公开表述汇编）
+    published: "2026-10-13"
+    note: "按日期汇编高管公开表述（Q3 2026：AI 支出修正为约 7 亿美元、效益未显现）。原始逐字稿需回 IR 归档。"
+    used_in: [financial-jpmorgan-llm-suite]
