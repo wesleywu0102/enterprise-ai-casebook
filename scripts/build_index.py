@@ -83,13 +83,24 @@ def main() -> None:
               "写文章引用前，先确认案例在同行业中的证据等级。" + "；".join(f"{k}={v}" for k, v in GRADE_LABEL.items())),
         encoding="utf-8",
     )
+    (INDEX / "by-deployment.md").write_text(
+        table(cases, "fde_involved", "按交付形态索引（含 FDE）",
+              "fde_involved 表示是否有人在客户现场对结果负责：none=无驻场，vendor-embedded=厂商 FDE，"
+              "si-partner=集成商驻场，in-house=甲方自建前线团队，unknown=公开信息不足。"
+              "读这张表时先看 unknown 有多少——那才是「FDE 已成标准形态」这类说法的真实边界。"),
+        encoding="utf-8",
+    )
 
     # 纯文本统计
-    print(f"已重建 3 个索引，共 {len(cases)} 条案例")
+    print(f"已重建 4 个索引，共 {len(cases)} 条案例")
     for g in ("A", "B", "C", "D", "X"):
         n = sum(1 for c in cases if c.get("evidence_grade") == g)
         if n:
             print(f"  {GRADE_LABEL[g]}: {n}")
+    fde_counts: dict[str, int] = defaultdict(int)
+    for c in cases:
+        fde_counts[str(c.get("fde_involved"))] += 1
+    print("  FDE 形态：" + "，".join(f"{k}={v}" for k, v in sorted(fde_counts.items())))
 
 
 if __name__ == "__main__":

@@ -1,7 +1,27 @@
 # OpenAI 的 FDE：把"驻场工程师"做成正式职级
 
-**证据等级：A**（官方招聘页面，逐字可核）
-**核实日期：2026-11-09**
+**证据等级：A**（官方博客 + 官方招聘页面，逐字可核）
+**核实日期：2026-11-10**
+
+---
+
+## 〇、团队什么时候成立的（2026-11-10 补正）
+
+此前本文写成"2025 年初成立"，方向对但缺原文。2026-10-22 OpenAI 官方博客 *What FDE means at OpenAI* 给出了创建者 Colin Jarvis 的第一人称说明：
+
+> "I founded the team in early 2025 to close what we call 'the deployment gap': the distance between what models appear capable of and what people can reliably use to do their work."
+
+这个定义比任何二手转述都准确：**FDE 要解决的不是"模型不行"，而是"能用"与"真的好用"之间的距离。**
+
+同一篇博客里还有一句划边界的话，值得单独抄下来：
+
+> "Do FDEs provide professional services? No. FDEs are customer-facing engineers who work alongside professional service partners to solve problems at the frontier of AI."
+
+> "If it can already be done with existing AI capabilities, an FDE typically isn't needed."
+
+这解释了为什么模型厂商的 FDE 团队规模一定很小：**它只接"现有能力边界之外"的项目**，剩下的交给咨询公司。
+
+> 注意：部分聚合站把 2026-10-22（博客发布日期）写成"FDE 团队成立日"，这是把发布日期误当成立日期。官方原文是 early 2025。
 
 ---
 
@@ -60,10 +80,11 @@ OpenAI 设有独立的 **Forward Deployed Engineering** 团队，并在多个地
 
 ## 五、不能从这份材料推出的结论
 
-1. **不能说"OpenAI 有数千名 FDE"。** 招聘页不披露团队规模。
+1. **不能说"OpenAI 有数千名 FDE"。** 招聘页与官方博客都不披露团队规模。唯一的规模线索是官方自述的"约 15 名 FDE 服务一家大型半导体客户、10 个以上用例、3–6 个月全部进生产"——客户不具名，成效（约 48% 定向测试生成耗时下降、22% 内核优化性能提升）也只有 OpenAI 单方口径。
 2. **不能说"OpenAI FDE 已服务多少客户"。** 未披露。
 3. **不能把岗位描述当成效。** 这是"要求做什么"，不是"做到了什么"。
 4. **不能假设中国区有同等配置。** 公开岗位集中在纽约、旧金山、阿布扎比。
+5. **不能把客户案例默认算成 FDE 项目。** BBVA、Lowe's、T-Mobile 都出现在 OpenAI 的 FDE 业务页上，但三家的官方材料都没有说这是 FDE 交付的。本库一律记 `fde_involved: unknown`，不替厂商补叙事。
 
 ## 六、对写作者的用法
 
@@ -76,7 +97,11 @@ OpenAI 设有独立的 **Forward Deployed Engineering** 团队，并在多个地
 ---
 
 **来源**
+- OpenAI Blog, *What FDE means at OpenAI*, 2026-10-22 — https://openai.com/index/forward-deployed-engineering-means/
+  关键句："I founded the team in early 2025 to close what we call 'the deployment gap'"
+- OpenAI Business, *Forward Deployed Engineering*（无日期）— https://openai.com/business/forward-deployed-engineering
 - OpenAI Careers: *Forward Deployed Engineer (FDE) - NYC* — https://openai.com/careers/forward-deployed-engineer-(fde)-nyc-new-york-city/
 - OpenAI Careers: *Forward Deployed Engineer (FDE), Financial Services - NYC* — https://openai.com/careers/forward-deployed-engineer-(fde)-financial-services-nyc-new-york-city/
 - OpenAI Careers: *Forward Deployed Engineer (FDE) - AI Infra - SF*
 - OpenAI Careers: *Forward Deployed Engineer - UAE*
+- 关联案例（客户方口径，均未确认 FDE 参与）：[`../cases/finance/bbva-openai-enterprise.md`](../cases/finance/bbva-openai-enterprise.md)、[`../cases/retail/lowes-mylow.md`](../cases/retail/lowes-mylow.md)、[`../cases/telecom/tmobile-intentcx.md`](../cases/telecom/tmobile-intentcx.md)

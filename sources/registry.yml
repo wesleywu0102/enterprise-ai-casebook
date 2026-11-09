@@ -4,9 +4,9 @@
 # 登记的目的不是收藏，而是记录：这条来源能不能用、能用来说明什么。
 
 meta:
-  last_updated: "2026-11-09"
-  total: 24
-  note: "访问日期统一为 2026-11-09；被站点拒绝抓取的已标注"
+  last_updated: "2026-11-10"
+  total: 78
+  note: "访问日期为 2026-11-09 至 2026-11-10；被站点拒绝抓取的已标注"
 
 sources:
   # ---------- A 级：同行评审 ----------
@@ -301,3 +301,377 @@ sources:
     published: "2026-10-13"
     note: "按日期汇编高管公开表述（Q3 2026：AI 支出修正为约 7 亿美元、效益未显现）。原始逐字稿需回 IR 归档。"
     used_in: [financial-jpmorgan-llm-suite]
+
+  # ---------- 2026-11-10 新增：FDE 客户案例（Palantir 线） ----------
+  - id: src-palantir-tgh-2024
+    url: https://investors.palantir.com/news-details/2024/Tampa-General-Hospital-Selects-Palantirs-AI-Software-to-Power-Connected-Care-Coordination-Extending-Long-Term-Partnership/
+    type: official-press-release
+    grade: B
+    publisher: Palantir / Business Wire（TGH 联合署名）
+    published: "2024-06-05"
+    note: "83% 患者安置耗时、28% PACU 滞留、30% 脓毒症住院日；均无基线无统计期。"
+    used_in: [healthcare-tampa-general-palantir]
+
+  - id: src-tgh-newsroom-2026
+    url: https://www.tgh.org/news/tgh-press-releases/2026/october/tampa-general-hospital-recognized-among-worlds-best-smart-hospitals-for-2027-by-newsweek
+    type: official-press-release
+    grade: B
+    publisher: Tampa General Hospital
+    published: "2026-10-22"
+    note: "客户官网：累计逾 1,000 条生命、48 小时脓毒症死亡率近 -68%。累计计数，非比率。"
+    used_in: [healthcare-tampa-general-palantir]
+
+  - id: src-palantir-impact-tgh
+    url: https://www.palantir.com/impact/tampa-general-hospital/
+    type: official-case-study
+    grade: C
+    publisher: Palantir
+    published: unknown
+    note: "同一 30% 在厂商页指向 nurse staffing ratio，与联合新闻稿的脓毒症住院日不一致。"
+    used_in: [healthcare-tampa-general-palantir]
+
+  - id: src-hitnews-tgh-2025
+    url: https://www.healthcareitnews.com/news/tampa-generals-investment-ai-enabled-care-coordination-software-saves-nearly-600-lives
+    type: media-report
+    grade: D
+    publisher: Healthcare IT News
+    published: "2025-07-15"
+    note: "转述院方高管：近 600 条生命、MRI 周转 +30%；含上一代工具被 FDA 要求停用的自述。"
+    used_in: [healthcare-tampa-general-palantir]
+
+  - id: src-palantir-wendys-2024
+    url: https://investors.palantir.com/news-details/2024/From-the-Farm-to-the-Frosty-Palantir-and-Wendys-Partner-on-AI-and-Supply-Chain-Digitalization/
+    type: official-press-release
+    grade: B
+    publisher: Palantir / Business Wire（QSCC 联合署名）
+    published: "2024-08-07"
+    note: "原文用将来时 will be moving onto AIP，被大量媒体写成已上线见效。"
+    used_in: [retail-wendys-qscc-palantir]
+
+  - id: src-pymnts-palantir-2025
+    url: https://www.pymnts.com/news/artificial-intelligence/2025/palantir-reinvents-wendys-supply-chain-network-walgreens-operations/
+    type: media-report
+    grade: D
+    publisher: PYMNTS
+    published: "2025-04-29"
+    note: "转述 QSCC CEO 在 Palantir 客户大会：5 分钟 vs 15 人一天、6,450 家门店。"
+    used_in: [retail-wendys-qscc-palantir]
+
+  - id: src-palantir-cleveland-2023
+    url: https://investors.palantir.com/news-details/2023/Cleveland-Clinic-and-Palantir-Technologies-Partner-to-Improve-Hospital-Performance-Through-Virtual-Command-Center/
+    type: official-press-release
+    grade: B
+    publisher: Palantir IR / PRNewswire
+    published: "2023-01-19"
+    note: "明确基于 Foundry（非 AIP），宣布时已在用。"
+    used_in: [healthcare-cleveland-clinic-palantir]
+
+  - id: src-palantir-impact-cleveland
+    url: https://www.palantir.com/impact/cleveland-clinic
+    type: official-case-study
+    grade: C
+    publisher: Palantir
+    published: unknown
+    note: "四条成效数字的唯一出处（75%/10%/20%/1 小时）；客户官网无对应披露。"
+    used_in: [healthcare-cleveland-clinic-palantir]
+
+  # ---------- 2026-11-10 新增：政府与公共部门 ----------
+  - id: src-dod-contract-2024-05-29
+    url: https://www.defense.gov/News/Contracts/Contract/Article/3790490/
+    type: regulatory-filing
+    grade: A
+    publisher: U.S. Department of Defense
+    published: "2024-05-29"
+    note: "4.8 亿美元 Maven Smart System 原型合同，单一投标，至 2029-05-28。"
+    used_in: [public-sector-dod-maven-smart-system]
+
+  - id: src-dod-contract-2025-05-21
+    url: https://www.defense.gov/News/Contracts/Contract/Article/4194643/
+    type: regulatory-filing
+    grade: A
+    publisher: U.S. Department of Defense
+    published: "2025-05-21"
+    note: "同一合同 7.95 亿美元修改（P00005），标的是软件许可。"
+    used_in: [public-sector-dod-maven-smart-system]
+
+  - id: src-defensenews-maven-2024
+    url: https://www.defensenews.com/artificial-intelligence/2024/05/30/palantir-wins-contract-to-expand-access-to-project-maven-ai-tools/
+    type: media-report
+    grade: D
+    publisher: Defense News
+    published: "2024-05-30"
+    note: "生产化定性、五个作战司令部、「自动识别潜在目标」的功能描述。"
+    used_in: [public-sector-dod-maven-smart-system]
+
+  - id: src-meritalk-nga-2025
+    url: https://www.meritalk.com/articles/nga-expands-maven-ai-system-in-year-of-ai-whitworth-says/
+    type: conference-talk
+    grade: B
+    publisher: MeriTalk（转述 NGA 局长 GEOINT 讲话）
+    published: "2025-05-27"
+    note: "2 万+ 活跃用户、35+ 工具、自 2024-03 翻两番。"
+    used_in: [public-sector-dod-maven-smart-system]
+
+  - id: src-uk-hcws57-fdp
+    url: https://questions-statements.parliament.uk/written-statements/detail/2023-11-21/hcws57
+    type: regulatory-filing
+    grade: A
+    publisher: UK Parliament / DHSC
+    published: "2023-11-21"
+    note: "FDP 合同金额原始出处：七年最多 3.3 亿英镑，首年至少 2,560 万英镑。"
+    used_in: [public-sector-nhs-fdp-palantir]
+
+  - id: src-nhs-fdp-contract
+    url: https://www.england.nhs.uk/digitaltechnology/nhs-federated-data-platform/security-privacy/contract-explainer/
+    type: official-press-release
+    grade: B
+    publisher: NHS England
+    published: unknown
+    note: "仅承诺三年、可延至 2031-03；覆盖最多 240 家机构。"
+    used_in: [public-sector-nhs-fdp-palantir]
+
+  - id: src-osr-fdp-2026
+    url: https://osr.statisticsauthority.gov.uk/news/nhs-england-federated-data-platform-fdp-presentation-and-communication-of-information-and-performance-metrics/
+    type: regulatory-filing
+    grade: A
+    publisher: UK Office for Statistics Regulation
+    published: "2026-07-22"
+    note: "监管结论：NHS England 2026-06-06 加注「无法就因果下结论」。本库最强的一手负面证据。"
+    used_in: [public-sector-nhs-fdp-palantir]
+
+  - id: src-palantir-fdp-blog
+    url: https://blog.palantir.com/ready-set-build-with-the-nhs-federated-data-platform-41405fa4c226
+    type: company-blog
+    grade: C
+    publisher: Palantir
+    published: "2026-04-30"
+    note: "厂商博客（数据截至 2025-12）：110,078 / 297,943 / 约 15% / 6.8%。"
+    used_in: [public-sector-nhs-fdp-palantir]
+
+  - id: src-commons-scitech-2026
+    url: https://publications.parliament.uk/pa/cm5902/cmselect/cmsctech/61/report.html
+    type: regulatory-filing
+    grade: A
+    publisher: UK House of Commons Science, Innovation and Technology Committee (HC 61)
+    published: "2026-06-03"
+    note: "建议行使 2027-02 解约条款；记录 Palantir 人员数据访问范围证词；点名其支持「controversial policies」。"
+    used_in: [public-sector-nhs-fdp-palantir]
+
+  - id: src-parliament-wq-3927
+    url: https://questions-statements.parliament.uk/written-questions/detail/2026-05-21/3927/
+    type: regulatory-filing
+    grade: A
+    publisher: UK Parliament
+    published: "2026-06-16"
+    note: "部长给成效：10 万+ 额外手术、近 9.4 万癌症路径、出院延迟 -14%、168 家信托。"
+    used_in: [public-sector-nhs-fdp-palantir]
+
+  # ---------- 2026-11-10 新增：OpenAI 客户（客户方口径） ----------
+  - id: src-bbva-openai-2025
+    url: https://www.bbva.com/en/innovation/bbva-and-openai-seal-a-strategic-alliance-to-redefine-banking-with-artificial-intelligence/
+    type: official-press-release
+    grade: B
+    publisher: BBVA
+    published: "2025-12-12"
+    note: "12 万员工、80% 日活、每周约 3 小时（员工自报）。客户方口径，价值高于供应商页。"
+    used_in: [financial-bbva-openai-enterprise]
+
+  - id: src-bbva-the-eight-es
+    url: https://www.bbva.com/es/innovacion/bbva-impulsa-the-eight-su-estrategia-para-transformar-la-experiencia-financiera-con-ia/
+    type: official-press-release
+    grade: B
+    publisher: BBVA（西语原稿）
+    published: "2025-12-12"
+    note: "补充：特定任务节省 >76%、2 万多个 GPT、4,000 多个高频使用。"
+    used_in: [financial-bbva-openai-enterprise]
+
+  - id: src-openai-fde-page
+    url: https://openai.com/business/forward-deployed-engineering
+    type: official-case-study
+    grade: C
+    publisher: OpenAI
+    published: unknown
+    note: "供应商页：把 DT 的「通话 -55%」与「AI 处理 40%」合并成 55% 自动化率；另称 BBVA 信用风险 80% 准确率，客户未确认。"
+    used_in: [financial-bbva-openai-enterprise, fde-openai]
+
+  - id: src-dt-ai-investor-day-2026
+    url: https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/10/deutsche-telekom-boosts-growth-efficiency-and-quality-through-t
+    type: official-press-release
+    grade: B
+    publisher: Deutsche Telekom
+    published: "2026-10-05"
+    note: "美国市场人工通话 -55%、AI 处理 40% 接触；无基线无区间。"
+    used_in: [telecom-tmobile-intentcx]
+
+  - id: src-lowes-q2fy26-call
+    url: https://corporate.lowes.com/sites/lowes-corp/files/low-usq-transcript-2026-08-19.pdf
+    type: earnings-call
+    grade: A
+    publisher: Lowe's Companies
+    published: "2026-08-19"
+    note: "2,500 万问题、使用助手的线上顾客转化率 3 倍。逐字稿可追责。"
+    used_in: [retail-lowes-mylow]
+
+  - id: src-lowes-pr-2025-05
+    url: https://corporate.lowes.com/generation/pdf/document-file.pdf?path=/newsroom/press-releases/lowes-deploys-first-scale-ai-assistant-retail-associates-05-05-25
+    type: official-press-release
+    grade: B
+    publisher: Lowe's
+    published: "2025-05-05"
+    note: "仅部署范围（1,700+ 门店），全文无成效数字。"
+    used_in: [retail-lowes-mylow]
+
+  # ---------- 2026-11-10 新增：按结果付费与咨询 ----------
+  - id: src-adt-q1-2026-call
+    url: https://equibles.com/stocks/adt/calls/2026-q1
+    type: earnings-call
+    grade: A
+    publisher: ADT Inc.（电话会转录）
+    published: "2026-04-30"
+    note: "聊天拦截 45%→60%、电话 16%→25%；点名 Sierra 与 Google。"
+    used_in: [financial-adt-sierra-agent]
+
+  - id: src-benzinga-adt-q1-2026
+    url: https://www.benzinga.com/insights/news/26/04/52176242/full-transcript-adt-q1-2026-earnings-call
+    type: media-report
+    grade: D
+    publisher: Benzinga
+    published: "2026-04"
+    note: "同一电话会另一份转录，用于交叉核对。"
+    used_in: [financial-adt-sierra-agent]
+
+  - id: src-sierra-outcome-pricing
+    url: https://sierra.ai/uk/blog/outcome-based-pricing-for-ai-agents
+    type: company-blog
+    grade: C
+    publisher: Sierra
+    published: "2024-12-10"
+    note: "按结果收费官方说明；保留 in most cases 例外，并承认路由类交互更适合按次计费。"
+    used_in: [financial-adt-sierra-agent]
+
+  - id: src-northhighland-lava
+    url: https://northhighland.com/microsite/2026/when-the-floor-is-lava-learn-to-dance-book
+    type: official-case-study
+    grade: B
+    publisher: North Highland
+    published: "2026"
+    note: "客户自己发布：400+ 项目、200+ 工程师、约快 50%。同页另有 Copilot 阶段数字，需区分。"
+    used_in: [professional-services-north-highland-claude]
+
+  - id: src-anthropic-fde-jd
+    url: https://www.anthropic.com/careers/jobs/5423029008
+    type: official-careers-page
+    grade: A
+    publisher: Anthropic
+    published: "2026"
+    note: "FDE 岗位 JD：embed directly、one of our founding FDEs、£225k–255k、出差 25–50%。"
+    used_in: [professional-services-north-highland-claude, fde-anthropic-applied-ai]
+
+  # ---------- 2026-11-10 新增：Fin 口径变更与 FDE 专题 ----------
+  - id: src-intercom-metrics-update
+    url: https://www.intercom.com/help/en/articles/15599377-update-to-fin-performance-metrics
+    type: official-case-study
+    grade: C
+    publisher: Intercom Help
+    published: "2026-08-31"
+    note: "厂商自行公告改变分母，明写 Resolution Rate: Will increase。含 33%→50% 算例。"
+    used_in: [software-intercom-fin]
+
+  - id: src-intercom-fin-outcomes
+    url: https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes
+    type: official-case-study
+    grade: C
+    publisher: Intercom Help
+    published: "2026-09-23"
+    note: "「解决」定义含 Assumed Resolution：客户关窗未再求助也算解决并计费。"
+    used_in: [software-intercom-fin]
+
+  - id: src-fin-blog-2024
+    url: https://www.intercom.com/blog/fin-2-powered-by-anthropic-claude-llm/
+    type: company-blog
+    grade: C
+    publisher: Intercom（Des Traynor）
+    published: "2024-10-10"
+    note: "51% 原始出处；同篇承认可通过挑选客户与行业给出更高数字。"
+    used_in: [software-intercom-fin]
+
+  - id: src-fin-blog-2025
+    url: https://www.intercom.com/blog/whats-new-with-fin-3
+    type: company-blog
+    grade: C
+    publisher: Intercom（Declan Ivory）
+    published: "2025-10-15"
+    note: "66% 原始出处；同篇自我提醒「66% 的解决率不等于替你做了 66% 的工作」。"
+    used_in: [software-intercom-fin]
+
+  - id: src-salesforce-acquires-fin
+    url: https://salesforce.com/news/press-releases/2026/09/10/salesforce-completes-acquisition-of-fin
+    type: official-press-release
+    grade: A
+    publisher: Salesforce
+    published: "2026-09-10"
+    note: "收购完成（约 36 亿美元）。Fin 指标此后并入 Salesforce 披露体系。"
+    used_in: [software-intercom-fin]
+
+  - id: src-openai-fde-blog
+    url: https://openai.com/index/forward-deployed-engineering-means/
+    type: company-blog
+    grade: A
+    publisher: OpenAI（Colin Jarvis）
+    published: "2026-10-22"
+    note: "「I founded the team in early 2025」；「Do FDEs provide professional services? No.」"
+    used_in: [fde-openai]
+
+  - id: src-palantir-bootcamp-page
+    url: https://www.palantir.com/platforms/aip/bootcamp
+    type: official-case-study
+    grade: B
+    publisher: Palantir
+    published: unknown
+    note: "官方定位：From 0 to use case in 5 days，含三步目标，无「5 天上生产」承诺。"
+    used_in: [fde-palantir-bootcamp]
+
+  - id: src-palantir-bootcamp-blog
+    url: https://blog.palantir.com/deploying-full-spectrum-ai-in-days-how-aip-bootcamps-work-21829ec8d560
+    type: company-blog
+    grade: B
+    publisher: Palantir
+    published: "2023-10-12"
+    note: "早期口径：one to five days。"
+    used_in: [fde-palantir-bootcamp]
+
+  - id: src-palantir-q1-2024-letter
+    url: https://www.palantir.com/q1-2024-letter/en
+    type: regulatory-filing
+    grade: A
+    publisher: Palantir
+    published: "2024-05"
+    note: "官方唯一硬数字：单季 more than 660 bootcamps。转化率无官方披露。"
+    used_in: [fde-palantir-bootcamp]
+
+  - id: src-anthropic-palantir-bw
+    url: https://www.businesswire.com/news/home/20241107699415/en/Anthropic-and-Palantir-Partner-to-Bring-Claude-AI-Models-to-AWS-for-U.S.-Government-Intelligence-and-Defense-Operations
+    type: official-press-release
+    grade: A
+    publisher: Business Wire（Palantir 发布）
+    published: "2024-11-07"
+    note: "Claude 进入 AIP/IL6。原文是 became accessible，非已落地项目。Anthropic 官网无独立稿。"
+    used_in: [fde-anthropic-applied-ai]
+
+  - id: src-palantir-fedstart
+    url: https://investors.palantir.com/news-details/2025/Anthropic-Joins-Palantirs-FedStart-Program-to-Deploy-Claude-Application/
+    type: official-press-release
+    grade: A
+    publisher: Palantir IR
+    published: "2025-04-17"
+    note: "FedStart / FedRAMP High / IL5；millions of federal employees 是未来时。"
+    used_in: [fde-anthropic-applied-ai]
+
+  - id: src-anthropic-gov
+    url: https://www.anthropic.com/solutions/government
+    type: official-case-study
+    grade: B
+    publisher: Anthropic
+    published: unknown
+    note: "Claude for Government 运行在 Palantir FedRAMP High 边界内；无客户成效。"
+    used_in: [fde-anthropic-applied-ai]

@@ -23,6 +23,20 @@ metrics:
     method: "厂商自算，基于其平台上客户的对话；「解决」的定义由厂商制定，未公开审计方法与抽样规则"
     window: "2026"
     direction: "quality-up"
+  - name: "解决率的时间序列"
+    value: "51% → 66% → 76%"
+    unit: "%"
+    baseline: "2024-10 的 51%（当时称 out of the box）"
+    method: "厂商逐年披露：2024-10 为 51%（数千客户、数百万对话），2025-10 为 66%（6,000+ 客户），2026-09 起为 76%（12,000+ 客户）"
+    window: "2024-10 ~ 2026-11"
+    direction: "quality-up"
+  - name: "分母口径变更（关键）"
+    value: "Resolution Rate: Will increase"
+    unit: "口径"
+    baseline: "变更前分母含 Fin Constrained（Fin 在场但没机会回答）的会话"
+    method: "厂商帮助中心 2026-08-31 公告，自行宣布把 Fin Constrained 移出分母；官方举例：1,000 会话中解决 250，旧口径 250÷750=33%，新口径 250÷500=50%"
+    window: "2026-08-31 起"
+    direction: "quality-up"
   - name: "客户规模"
     value: "12,000+ / 8,000+"
     unit: "家"
@@ -60,6 +74,46 @@ sources:
     published: "2026"
     accessed: "2026-11-09"
     note: "同一厂商的学习中心页写「65% avg, up to 93%」，并称行业真实解决率区间为 60–86%，高于此应怀疑定义"
+  - id: "src-intercom-metrics-update"
+    type: "official-case-study"
+    grade: "C"
+    url: "https://www.intercom.com/help/en/articles/15599377-update-to-fin-performance-metrics"
+    publisher: "Intercom Help"
+    published: "2026-08-31"
+    accessed: "2026-11-10"
+    note: "厂商自行公告改变分母：把 Fin Constrained 移出解决率计算，并明写 Resolution Rate: Will increase。本库最重要的口径证据。"
+  - id: "src-intercom-fin-outcomes"
+    type: "official-case-study"
+    grade: "C"
+    url: "https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes"
+    publisher: "Intercom Help"
+    published: "2026-09-23"
+    accessed: "2026-11-10"
+    note: "定义「解决」= 客户确认满意（confirmed）或直接关闭对话未再求助（assumed）；后者也算解决并计费。"
+  - id: "src-fin-blog-2024"
+    type: "company-blog"
+    grade: "C"
+    url: "https://www.intercom.com/blog/fin-2-powered-by-anthropic-claude-llm/"
+    publisher: "Intercom（Des Traynor）"
+    published: "2024-10-10"
+    accessed: "2026-11-10"
+    note: "51% 的原始出处；同篇承认其他厂商可通过挑选客户与行业给出更高数字。"
+  - id: "src-fin-blog-2025"
+    type: "company-blog"
+    grade: "C"
+    url: "https://www.intercom.com/blog/whats-new-with-fin-3"
+    publisher: "Intercom（Declan Ivory）"
+    published: "2025-10-15"
+    accessed: "2026-11-10"
+    note: "66% 的原始出处；同篇自我提醒「66% 的解决率不等于替你做了 66% 的工作」。"
+  - id: "src-salesforce-acquires-fin"
+    type: "official-press-release"
+    grade: "A"
+    url: "https://salesforce.com/news/press-releases/2026/09/10/salesforce-completes-acquisition-of-fin"
+    publisher: "Salesforce"
+    published: "2026-09-10"
+    accessed: "2026-11-10"
+    note: "收购完成（约 36 亿美元）。此后 Fin 的指标口径并入 Salesforce 披露体系，不再独立。"
 tags: ["metric-definition-war", "vendor-sourced-number", "human-review"]
 replicability: 2
 human_in_loop: "escalation-only"
@@ -110,6 +164,24 @@ SaaS 公司的客服成本随客户数线性增长：
 | 客户数 | 12,000+ / 8,000+ | 两个页面不一致 | 官网 / 定价页 |
 | Anthropic 用量 | 约 56 万次/月，约 79% | 客户高管引语 | Intercom 客户页 |
 | 厂商承诺线 | 65%（未达标赔 100 万美元） | 仅适用 25 万次/月以上客户 | 定价页 |
+
+### 解决率的三年时间线，以及中间的换尺子
+
+| 时间 | 数字 | 原文 | 口径 |
+|---|---|---|---|
+| 2024-10-10 | **51%** | "an average resolution rate of 51% across thousands of Intercom customers and millions of conversations" | 全体客户平均，称 out of the box（未调优） |
+| 2025-10-15 | **66%** | "its average resolution rate has continued to climb to 66% across our 6,000+ customers. Over 20% of our customers are getting above 80%" | 全体客户平均 |
+| **2026-08-31** | **换尺子** | "Resolution Rate: Will increase, because Fin Constrained conversations are no longer counted in the denominator" | 分母剔除"Fin 在场但没机会回答"的会话 |
+| 2026-09-10 | **76%** | "achieving an industry-leading average resolution rate of 76%" | Salesforce 收购完成稿照搬 |
+| 2026-11（当前） | **76%** | "Fin customers average a 76% resolution rate, across 12,000+ businesses" | 全体客户平均 |
+
+厂商自己在帮助中心给出的算例最清楚：1,000 个会话里 Fin 解决了 250 个，旧口径分母 750 → **33%**；新口径分母 500 → **50%**。同一批对话，换分母，数字涨 17 个百分点。
+
+**第二重换尺子：什么算"解决"。** 帮助中心的定义是：客户在 Fin 最后一次回答后（a）确认满意，或（b）**直接关掉对话、没再求助**——后者叫 "Assumed Resolution"，同样算解决并计费。也就是说，客户什么反应都没有，也可能被算作"已解决"。
+
+**第三重：厂商自己早就警告过。** 2025-10 的博客里写着："if Fin is resolving 66% of your queries, it isn't yet doing 66% of the work for you." 2024 年 Fin 2 发布时更直白："we too can selectively sample certain customers or certain verticals and give you a far higher number."
+
+**一个必须知道的事实**：Salesforce 已于 **2026-09-10** 完成对 Fin 的收购（约 36 亿美元），Intercom 改名 Fin。当前主推的 76% 出现在收购完成前后，此后该指标并入 Salesforce 的披露体系，不再有独立第三方视角。
 
 ## 6. 不可验证或存疑之处
 

@@ -62,19 +62,24 @@
 │   ├── finance/               # 按行业分目录
 │   ├── healthcare/
 │   ├── manufacturing/
+│   ├── professional-services/
+│   ├── public-sector/
 │   ├── retail/
 │   ├── software/
+│   ├── telecom/
 │   └── retracted/             # 被回撤/修正的案例（保留，不删除）
 ├── fde/                       # FDE（前沿部署工程师）专题
-│   ├── README.md              # FDE 是什么、五种形态、如何评估
-│   ├── openai-fde.md          # 模型厂商自建 FDE 团队
+│   ├── README.md              # FDE 是什么、五种形态、如何评估、客户案例索引
+│   ├── openai-fde.md          # 模型厂商自建 FDE 团队（2025 年初成立）
+│   ├── anthropic-applied-ai.md# Anthropic FDE 仍在组建期；与 Palantir 的合作被误读
 │   ├── anthropic-goldman-jv.md# FDE 被资本化：15 亿美元交付公司
-│   ├── palantir-bootcamp.md   # FDE 的原始形态：Bootcamp 压缩销售周期
+│   ├── palantir-bootcamp.md   # FDE 的原始形态：Bootcamp；转化率溯源失败
 │   └── china-fde.md           # 中国 FDE：运营商、集成商、地方政府
 ├── index/
 │   ├── by-industry.md         # 自动生成
 │   ├── by-scenario.md         # 自动生成
 │   ├── by-evidence.md         # 自动生成
+│   ├── by-deployment.md       # 自动生成：按 FDE 形态切片
 │   └── watchlist.md           # 待核实线索（D 级，不进正式案例）
 ├── sources/
 │   └── registry.yml           # 来源登记表：URL、类型、抓取日期、可信度

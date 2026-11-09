@@ -64,17 +64,38 @@
 
 | 文件 | 主题 | 证据等级 |
 |---|---|---|
-| [`openai-fde.md`](openai-fde.md) | 模型厂商把 FDE 做成正式职级：岗位职责、考核口径、地理分布 | A（官方招聘页） |
+| [`openai-fde.md`](openai-fde.md) | 模型厂商把 FDE 做成正式职级：2025 年初成立的团队、考核口径、地理分布 | A（官方博客 + 招聘页） |
+| [`anthropic-applied-ai.md`](anthropic-applied-ai.md) | Anthropic 的 FDE 仍在组建期；与 Palantir 的合作被误读成"已进五角大楼" | A（JD/公告）/ 无（成效） |
 | [`anthropic-goldman-jv.md`](anthropic-goldman-jv.md) | FDE 被资本化：15 亿美元合资公司，瞄准 PE 旗下中型企业 | A（官方新闻稿） |
-| [`palantir-bootcamp.md`](palantir-bootcamp.md) | FDE 的原始形态：Bootcamp 如何把销售周期压到 5 天 | B/C（官方 + 二手，数字有冲突） |
+| [`palantir-bootcamp.md`](palantir-bootcamp.md) | FDE 的原始形态：Bootcamp 把 POC 压到 5 天；转化率溯源失败 | B（官方）/ 无（转化率） |
 | [`china-fde.md`](china-fde.md) | 中国路径：运营商、集成商、地方政府、软件谷联盟 | B/C（官媒 + 企业自述） |
+
+### 已经写进案例库的 FDE 客户案例
+
+上面五篇是"模式笔记"。真正落到客户、带成效数字的条目在 `cases/` 下，用 `fde_involved` 字段标记：
+
+| 案例 | 客户 | 供应商 | FDE 形态 | 证据 |
+|---|---|---|---|---|
+| [Tampa General](../cases/healthcare/tampa-general-palantir.md) | 学术医疗中心 | Palantir | **vendor-embedded**（原文有 "embedded themselves" 与 "forward-deployed engineers"） | B |
+| [Cleveland Clinic](../cases/healthcare/cleveland-clinic-palantir.md) | 学术医疗中心 | Palantir | vendor-embedded（共创，非驻场接需求） | B |
+| [Wendy's / QSCC](../cases/retail/wendys-qscc-palantir.md) | 快餐供应链合作社 | Palantir | unknown（官方无 FDE 表述） | C |
+| [英国 NHS FDP](../cases/public-sector/nhs-fdp-palantir.md) | 公共医疗 | Palantir 联合体 | unknown | A（含监管否定） |
+| [美国国防部 Maven](../cases/public-sector/dod-maven-smart-system.md) | 国防 | Palantir USG | vendor-embedded（证据弱于商业侧） | A（合同文件） |
+| [BBVA](../cases/finance/bbva-openai-enterprise.md) | 银行 | OpenAI | unknown（客户未确认 FDE 参与） | B |
+| [T-Mobile](../cases/telecom/tmobile-intentcx.md) | 电信 | OpenAI | vendor-embedded（仅供应商侧表述） | B |
+| [Lowe's](../cases/retail/lowes-mylow.md) | 零售 | OpenAI | unknown | A（财报电话会） |
+| [ADT](../cases/finance/adt-sierra-agent.md) | 安防 | Sierra + Google | vendor-embedded（陪跑，无驻场条款） | A（财报电话会） |
+| [North Highland](../cases/professional-services/north-highland-claude.md) | 咨询 | Anthropic | unknown（客户自采） | B |
+
+**这张表最重要的一点**：十家里只有 Palantir 的条目能拿出"工程师常驻客户现场"的公开表述，其余全部是 `unknown` 或仅供应商单方说法。所谓"FDE 已成标准交付形态"，目前更多是叙事，不是可核验的普遍事实。
 
 ---
 
 ## 六、写这个专题时的常见错误
 
 1. **把 FDE 等同于"驻场"。** 驻场只是形式。核心是责任归属与知识回流。
-2. **用 Palantir 的转化率当行业基准。** 该数字在不同季度从 21% 跳到 75%，口径未统一。
+2. **用 Palantir 的转化率当行业基准。** 公开转述有 30–40%、70%、75% 三个互斥版本，全部溯源失败；官方唯一可引的是 Q1 2024 单季 660+ 场 bootcamp。
 3. **忽略 in-house 形态。** 中国的 FDE 讨论大量发生在甲方内部（联通软研院、美的），只盯厂商会漏掉一半。
 4. **把"AI FDE"当成已实现。** 目前只有厂商高管的公开表述，没有独立验证的交付记录。
 5. **不写代价。** 只写"FDE 让 AI 落地更快"，不写"FDE 让毛利更低、扩张更慢"，是不完整的。
+6. **把客户案例默认算成 FDE 项目。** BBVA、Lowe's、T-Mobile 都出现在 OpenAI 的 FDE 页面上，但三家客户自己的材料都没这么说。除非有客户方或合同证据，一律记 `unknown`。
