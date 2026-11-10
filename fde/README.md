@@ -32,6 +32,8 @@
 
 注意：**in-house 形态在中国更常见**，且被官方话语体系称为"研发前置""嵌入式支撑"。评价它时不能套用外包的框架。
 
+**但形态不由行业决定。** 医疗内部就是反例：Jefferson / Providence 做病历文书是 `none`，Tampa / Cleveland 做床位调度是 `vendor-embedded`。差别在 AI 的输出要不要改动别人已有的工作方式。按行业选方案会漏掉这件事，完整判断见 [`findings/05-industry-is-the-constraint.md`](../findings/05-industry-is-the-constraint.md)。
+
 ---
 
 ## 三、怎么判断一个"FDE 故事"是真的
