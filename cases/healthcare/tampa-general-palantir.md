@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "healthcare"
 sub_industry: "academic-medical-center"
 scenario: ["scheduling-optimization", "clinical-decision"]
+pattern: ["ops-orchestration"]
 deployment_model: "platform-build"
 fde_involved: "vendor-embedded"
 ai_tech: ["digital-twin", "agent", "predictive-ml"]

@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "financial-services"
 sub_industry: "banking"
 scenario: ["knowledge-retrieval", "software-engineering", "backoffice-automation"]
+pattern: ["employee-platform"]
 deployment_model: "platform-build"
 fde_involved: "in-house"
 ai_tech: ["LLM", "RAG", "agent"]

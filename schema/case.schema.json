@@ -4,7 +4,7 @@
   "title": "Enterprise AI Case",
   "type": "object",
   "required": [
-    "id", "title", "company", "industry", "scenario",
+    "id", "title", "company", "industry", "pattern", "scenario",
     "deployment_model", "fde_involved", "ai_tech", "scale",
     "start_date", "status", "evidence_grade", "last_verified",
     "metrics", "sources", "confidence_notes",
@@ -30,6 +30,18 @@
       ]
     },
     "sub_industry": { "type": "string" },
+    "pattern": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "retrieval-knowledge", "ambient-documentation", "deflection-agent",
+          "ops-orchestration", "embedded-codegen", "employee-platform"
+        ]
+      },
+      "description": "可复用架构模式，见 solutions/README.md"
+    },
     "scenario": {
       "type": "array",
       "minItems": 1,

@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "pharma-biotech"
 sub_industry: "drug-discovery"
 scenario: ["knowledge-retrieval", "document-processing", "data-analysis"]
+pattern: ["employee-platform"]
 deployment_model: "vendor-saas"
 fde_involved: "none"
 ai_tech: ["LLM", "RAG"]

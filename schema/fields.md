@@ -13,6 +13,7 @@
 | `industry` | 是 | enum | 必须取自 `taxonomy/industries.yml` | 自造行业名 |
 | `sub_industry` | 否 | string | 更细的行业标签，自由文本 | — |
 | `scenario` | 是 | array | 1–3 个，取自 `taxonomy/scenarios.yml` | 填 6 个以上，等于没分类 |
+| `pattern` | 是 | array | 1 个，取自 `solutions/` 的 6 个架构模式：`retrieval-knowledge` / `ambient-documentation` / `deflection-agent` / `ops-orchestration` / `embedded-codegen` / `employee-platform` | 用业务场景词代替架构模式（"降本增效"不是模式） |
 
 ## 落地方式
 

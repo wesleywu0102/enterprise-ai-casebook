@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "financial-services"
 sub_industry: "security-services"
 scenario: ["customer-support", "sales-enablement"]
+pattern: ["deflection-agent"]
 deployment_model: "vendor-saas"
 fde_involved: "vendor-embedded"
 ai_tech: ["LLM", "agent", "ASR"]

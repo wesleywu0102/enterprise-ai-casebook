@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "financial-services"
 sub_industry: "wealth-management"
 scenario: ["knowledge-retrieval", "document-processing"]
+pattern: ["retrieval-knowledge"]
 deployment_model: "vendor-copilot"
 fde_involved: "unknown"
 ai_tech: ["LLM", "RAG", "ASR"]

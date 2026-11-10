@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "retail"
 sub_industry: "home-improvement"
 scenario: ["customer-support", "sales-enablement", "knowledge-retrieval"]
+pattern: ["retrieval-knowledge"]
 deployment_model: "in-house"
 fde_involved: "unknown"
 ai_tech: ["LLM", "RAG", "agent"]

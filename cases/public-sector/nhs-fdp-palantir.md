@@ -6,6 +6,7 @@ company_hq: "UK"
 industry: "public-sector"
 sub_industry: "healthcare-administration"
 scenario: ["scheduling-optimization", "data-analysis"]
+pattern: ["ops-orchestration"]
 deployment_model: "platform-build"
 fde_involved: "unknown"
 ai_tech: ["digital-twin", "predictive-ml"]

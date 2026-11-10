@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "public-sector"
 sub_industry: "defense"
 scenario: ["data-analysis", "risk-compliance"]
+pattern: ["ops-orchestration"]
 deployment_model: "platform-build"
 fde_involved: "vendor-embedded"
 ai_tech: ["CV", "LLM", "agent"]

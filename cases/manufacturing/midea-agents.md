@@ -6,6 +6,7 @@ company_hq: "CN"
 industry: "manufacturing"
 sub_industry: "home-appliance"
 scenario: ["scheduling-optimization", "supply-chain", "manufacturing-quality"]
+pattern: ["ops-orchestration"]
 deployment_model: "in-house"
 fde_involved: "in-house"
 ai_tech: ["LLM", "agent", "predictive-ml"]

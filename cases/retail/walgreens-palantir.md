@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "retail"
 sub_industry: "pharmacy-retail"
 scenario: ["scheduling-optimization", "supply-chain"]
+pattern: ["ops-orchestration"]
 deployment_model: "platform-build"
 fde_involved: "vendor-embedded"
 ai_tech: ["agent", "predictive-ml", "rules"]

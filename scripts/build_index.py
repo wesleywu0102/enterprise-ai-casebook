@@ -23,6 +23,15 @@ GRADE_LABEL = {
     "X": "X 已回撤",
 }
 
+PATTERN_LABEL = {
+    "retrieval-knowledge": "1 检索问答（RAG）",
+    "ambient-documentation": "2 环境文书",
+    "deflection-agent": "3 对话拦截 Agent",
+    "ops-orchestration": "4 运营编排",
+    "embedded-codegen": "5 工程内嵌生成",
+    "employee-platform": "6 全员平台",
+}
+
 
 def load_cases() -> list[dict]:
     out = []
@@ -39,7 +48,9 @@ def load_cases() -> list[dict]:
     return out
 
 
-def table(rows: list[dict], group_key: str, title: str, intro: str) -> str:
+def table(rows: list[dict], group_key: str, title: str, intro: str,
+          label_map: dict[str, str] | None = None,
+          link_map: dict[str, str] | None = None) -> str:
     buckets: dict[str, list[dict]] = defaultdict(list)
     for c in rows:
         key = c.get(group_key)
@@ -51,7 +62,10 @@ def table(rows: list[dict], group_key: str, title: str, intro: str) -> str:
 
     lines = [f"# {title}", "", intro, "", f"> 由 `scripts/build_index.py` 自动生成，请勿手工编辑。共 {len(rows)} 条案例。", ""]
     for key in sorted(buckets):
-        lines.append(f"## {key}（{len(buckets[key])}）")
+        label = (label_map or {}).get(key, key)
+        if link_map and key in link_map:
+            label = f"[{label}](../solutions/{link_map[key]})"
+        lines.append(f"## {label}（{len(buckets[key])}）")
         lines.append("")
         lines.append("| 案例 | 企业 | 场景 | 证据 | 状态 | 交付 |")
         lines.append("|---|---|---|---|---|---|")
@@ -90,9 +104,23 @@ def main() -> None:
               "读这张表时先看 unknown 有多少——那才是「FDE 已成标准形态」这类说法的真实边界。"),
         encoding="utf-8",
     )
+    (INDEX / "by-pattern.md").write_text(
+        table(cases, "pattern", "按方案模式索引",
+              "6 个可复用架构模式，覆盖全部案例。点标题进方案库看参考架构、组件选型、集成点与失败模式。",
+              label_map=PATTERN_LABEL,
+              link_map={
+                  "retrieval-knowledge": "01-retrieval-knowledge.md",
+                  "ambient-documentation": "02-ambient-documentation.md",
+                  "deflection-agent": "03-deflection-agent.md",
+                  "ops-orchestration": "04-ops-orchestration.md",
+                  "embedded-codegen": "05-embedded-codegen.md",
+                  "employee-platform": "06-employee-platform.md",
+              }),
+        encoding="utf-8",
+    )
 
     # 纯文本统计
-    print(f"已重建 4 个索引，共 {len(cases)} 条案例")
+    print(f"已重建 5 个索引，共 {len(cases)} 条案例")
     for g in ("A", "B", "C", "D", "X"):
         n = sum(1 for c in cases if c.get("evidence_grade") == g)
         if n:

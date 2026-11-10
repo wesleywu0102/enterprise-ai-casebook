@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "retail"
 sub_industry: "restaurant-supply-chain"
 scenario: ["supply-chain", "scheduling-optimization"]
+pattern: ["ops-orchestration"]
 deployment_model: "platform-build"
 fde_involved: "unknown"
 ai_tech: ["digital-twin", "agent"]

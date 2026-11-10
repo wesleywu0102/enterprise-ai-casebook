@@ -6,6 +6,7 @@ company_hq: "DE"
 industry: "manufacturing"
 sub_industry: "automotive"
 scenario: ["manufacturing-quality", "software-engineering"]
+pattern: ["embedded-codegen"]
 deployment_model: "vendor-copilot"
 fde_involved: "unknown"
 ai_tech: ["LLM"]

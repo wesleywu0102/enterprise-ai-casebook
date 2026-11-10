@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "professional-services"
 sub_industry: "consulting"
 scenario: ["document-processing", "software-engineering", "knowledge-retrieval"]
+pattern: ["embedded-codegen"]
 deployment_model: "vendor-saas"
 fde_involved: "unknown"
 ai_tech: ["LLM", "agent", "RAG"]

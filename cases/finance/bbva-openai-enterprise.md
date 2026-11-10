@@ -6,6 +6,7 @@ company_hq: "ES"
 industry: "financial-services"
 sub_industry: "banking"
 scenario: ["knowledge-retrieval", "document-processing", "software-engineering"]
+pattern: ["employee-platform"]
 deployment_model: "vendor-saas"
 fde_involved: "unknown"
 ai_tech: ["LLM", "RAG", "agent"]

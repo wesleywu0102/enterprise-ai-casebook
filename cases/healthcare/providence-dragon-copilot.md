@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "healthcare"
 sub_industry: "hospital-system"
 scenario: ["clinical-documentation"]
+pattern: ["ambient-documentation"]
 deployment_model: "vendor-copilot"
 fde_involved: "none"
 ai_tech: ["ASR", "LLM"]

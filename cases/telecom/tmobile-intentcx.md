@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "telecom"
 sub_industry: "mobile-carrier"
 scenario: ["customer-support", "sales-enablement"]
+pattern: ["deflection-agent"]
 deployment_model: "in-house"
 fde_involved: "vendor-embedded"
 ai_tech: ["LLM", "agent", "ASR"]

@@ -6,6 +6,7 @@ company_hq: "SE"
 industry: "financial-services"
 sub_industry: "payments"
 scenario: ["customer-support"]
+pattern: ["deflection-agent"]
 deployment_model: "vendor-saas"
 fde_involved: "none"
 ai_tech: ["LLM"]

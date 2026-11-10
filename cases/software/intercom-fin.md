@@ -6,6 +6,7 @@ company_hq: "US"
 industry: "software-internet"
 sub_industry: "saas"
 scenario: ["customer-support"]
+pattern: ["deflection-agent"]
 deployment_model: "vendor-saas"
 fde_involved: "none"
 ai_tech: ["LLM", "RAG", "agent"]
